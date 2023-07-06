@@ -16,4 +16,19 @@ class Presensi extends Model
         'keterangan',
         'pertemuan',
     ];
+
+    public function kelas()
+    {
+        return $this->hasMany(Kelas::class);
+    }
+
+    public function matkuls()
+    {
+        return $this->hasMany(Matkul::class);
+    }
+
+    public function Users()
+    {
+        return $this->hasMany(User::class);
+    }
 }
