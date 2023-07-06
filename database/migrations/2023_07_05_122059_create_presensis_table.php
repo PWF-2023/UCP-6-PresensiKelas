@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('presensis', function (Blueprint $table) {
             $table->id();
+            $table->string('pertemuan');
+            $table->string('keterangan');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('matkul_id');
             $table->unsignedBigInteger('kelas_id');
