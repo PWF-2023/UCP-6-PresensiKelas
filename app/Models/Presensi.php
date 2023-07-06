@@ -13,5 +13,7 @@ class Presensi extends Model
         'user_id',
         'kelas_id',
         'matkul_id',
+        'keterangan',
+        'pertemuan',
     ];
 }

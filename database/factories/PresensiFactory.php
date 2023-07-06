@@ -23,6 +23,8 @@ class PresensiFactory extends Factory
             'user_id' => random_int(1,50),
             'matkul_id' => random_int(1,5),
             'kelas_id' => random_int(1,3),
+            'keterangan' => fake()->randomElement(['tidak hadir', 'hadir']),
+            'pertemuan' => random_int(1,10),
         ];
     }
 }
