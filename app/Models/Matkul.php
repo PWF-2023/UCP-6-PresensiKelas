@@ -12,4 +12,9 @@ class Matkul extends Model
     protected $fillable = [
         'name',
     ];
+
+    public function presensi()
+    {
+        return $this->belongsTo(Presensi::class);
+    }
 }
