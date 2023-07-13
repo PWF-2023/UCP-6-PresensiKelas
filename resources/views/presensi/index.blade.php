@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Presensi') }}
         </h2>
     </x-slot>
@@ -11,7 +11,7 @@
                 <div class="p-6 text-xl text-gray-900 dark:text-gray-100">
                     <div class="flex items-center justify-between">
                         <div>
-                            <x-create-button href="{{ route('presensi.create') }}"/>
+                            {{-- <x-create-button href="{{ route('presensi.create') }}"/> --}}
                         </div>
                         <div>
                             @if (session('success'))
@@ -48,7 +48,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse ($presensis as $presensi)
+                            {{-- @forelse ($presensis as $presensi)
                             <tr class="odd:bg-white odd:dark:bg-gray-800 even:bg-gray-50 even:dark:bg-gray-700">
                                 <td scope='row' class="px-6 py-4 font-medium text-gray-900 dark:text-white">
                                     <a href="{{ route('presensi.edit',$presensi) }}" class="hover:underline">{{ $presensi->nama }}</a>
@@ -100,11 +100,11 @@
                                 </td>
                             </tr>
 
-                            @endforelse
+                            @endforelse --}}
                         </tbody>
                     </table>
                 </div>
-                @if ($presensisCompleted > 1)
+                {{-- @if ($presensisCompleted > 1)
                 <div class="p-6 text-xl text-gray-900 dark:text-gray-100">
                     <form action="{{ route('presensi.deleteallcompleted') }}" method="Post">
                         @csrf
@@ -113,7 +113,7 @@
                     </form>
                 </div>
 
-                @endif
+                @endif --}}
             </div>
         </div>
     </div>
