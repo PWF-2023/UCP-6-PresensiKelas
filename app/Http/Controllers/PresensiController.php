@@ -4,12 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Presensi;
+use App\Models\User;
 
 class PresensiController extends Controller
 {
     public function index()
     {
-        $presensis = Presensi::all();
+        // $users = User::with('presensi')->get();
+
+        // $presensis = Presensi::join('users', 'presensis.user_id', '=', 'users.id')
+        //     ->with('matkul','kelas')
+        //     ->select('presensis.*')
+        //     ->get();
+        $presensis = Presensi::with('user', 'matkul', 'kelas')->get();
+        // dd($presensis->toArray());
         return view('presensi.index', compact('presensis'));
     }
 

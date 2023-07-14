@@ -9,6 +9,12 @@ class Presensi extends Model
 {
     use HasFactory;
 
+    protected $with =[
+        'user',
+        'matkul',
+        'kelas',
+    ];
+
     protected $fillable = [
         'user_id',
         'kelas_id',
@@ -19,16 +25,16 @@ class Presensi extends Model
 
     public function kelas()
     {
-        return $this->hasMany(Kelas::class);
+        return $this->belongsTo(Kelas::class);
     }
 
-    public function matkuls()
+    public function matkul()
     {
-        return $this->hasMany(Matkul::class);
+        return $this->belongsTo(Matkul::class);
     }
 
-    public function Users()
+    public function User()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsTo(User::class);
     }
 }

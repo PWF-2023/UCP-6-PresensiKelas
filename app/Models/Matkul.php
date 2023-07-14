@@ -13,8 +13,8 @@ class Matkul extends Model
         'name',
     ];
 
-    public function presensi()
+    public function presensis()
     {
-        return $this->belongsTo(Presensi::class);
+        return $this->hasMany(Presensi::class);
     }
 }

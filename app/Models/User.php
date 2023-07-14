@@ -17,6 +17,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
     protected $fillable = [
         'name',
         'email',
@@ -43,9 +44,8 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function presensi()
+    public function presensis()
     {
-        return $this->belongsTo(Presensi::class);
+        return $this->hasMany(Presensi::class);
     }
-
 }

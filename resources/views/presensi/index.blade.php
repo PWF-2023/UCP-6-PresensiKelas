@@ -48,10 +48,16 @@
                             @forelse ($presensis as $presensi)
                             <tr class="odd:bg-white odd:dark:bg-gray-800 even:bg-gray-50 even:dark:bg-gray-700">
                                 <td scope='row' class="px-6 py-4 font-medium text-gray-900 dark:text-white">
-                                    <a href="{{ route('presensi.edit',$presensi) }}" class="hover:underline"></a>
+                                    <a href="{{ route('presensi.edit',$presensi) }}" class="hover:underline">{{ $presensi['user']['name']}}</a>
                                 </td>
                                 <td class="hidden px-6 py-4 md:block">
                                     {{ $presensi->keterangan }}
+                                </td>
+                                <td class="px-6 py-4">
+                                    {{ $presensi['matkul']['name'] }}
+                                </td>
+                                <td class="px-6 py-4">
+                                    {{ $presensi['kelas']['name'] }}
                                 </td>
                                 <td class="px-6 py-4">
                                     <div class="flex space-x-3">
