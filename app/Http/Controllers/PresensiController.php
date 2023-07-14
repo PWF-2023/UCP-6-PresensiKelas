@@ -7,6 +7,7 @@ use App\Models\Presensi;
 
 class PresensiController extends Controller
 {
+<<<<<<< HEAD
     public function index()
     {
         $presensi = Presensi::all();
@@ -77,4 +78,12 @@ class PresensiController extends Controller
 
         return redirect()->route('presensi.index')->with('success', 'Presensi berhasil dihapus');
     }
+=======
+    //index , create, store , edit , update, destroy
+    public function index()
+    {
+        return view('presensi.index');
+    }
+
+>>>>>>> e467d9c03d615851808693ce9db03c3663ee18a0
 }

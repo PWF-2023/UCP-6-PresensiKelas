@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\PresensiController;
+<<<<<<< HEAD
 use App\Http\Controllers\MatkulController;
+=======
+>>>>>>> e467d9c03d615851808693ce9db03c3663ee18a0
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +22,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// tambahkan route presensi disini
+Route::get('/presensi', [PresensiController::class, 'index'])->name('presensi.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
