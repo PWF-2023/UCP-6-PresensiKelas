@@ -19,14 +19,10 @@
                         {{ __('Presensi') }}
                     </x-nav-link>
                     <x-nav-link :href="route('matkul.index')" :active="request()->routeIs('matkul.index')">
-<<<<<<< HEAD
                         {{ __('Mata Kuliah') }}
                     </x-nav-link>
                     <x-nav-link :href="route('kelas.index')" :active="request()->routeIs('kelas.index')">
                         {{ __('Kelas') }}
-=======
-                        {{ __('Matkul') }}
->>>>>>> 2a3dfa1fb690c7bc2aa7634274e17aed5ee47262
                     </x-nav-link>
                 </div>
             </div>

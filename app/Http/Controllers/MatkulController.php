@@ -9,46 +9,18 @@ class MatkulController extends Controller
 {
     public function index()
     {
-<<<<<<< HEAD
         return view('matkul.index');
     }
-    // public function create()
-    // {
-
-    //     return view('matkul.create');
-    // }
-    // public function store(Request $request,Matkul $matkul)
-    // {
-
-
-    //     return redirect()->route('matkul.index')->with('success','Todo created successfully!');
-    // }
-=======
-        $matkuls = Matkul::all();
-        return view('matkul.index', compact('matkuls'));
-    }
-
     public function create()
     {
         return view('matkul.create');
     }
 
-    public function store(Request $request)
+    public function store(Request $request,Matkul $matkul)
     {
-        $this->validate($request, [
-            'nama' => 'required',
-            'kode' => 'required|unique:matkuls',
-            'sks' => 'required|numeric|min:1'
-        ]);
-
-        Matkul::create([
-            'nama' => $request->nama,
-            'kode' => $request->kode,
-            'sks' => $request->sks
-        ]);
-
-        return redirect()->route('matkul.index')->with('success', 'Mata kuliah berhasil ditambahkan');
+        return redirect()->route('matkul.index')->with('success','Todo created successfully!');
     }
+
 
     public function edit($id)
     {
@@ -80,5 +52,4 @@ class MatkulController extends Controller
 
         return redirect()->route('matkul.index')->with('success', 'Mata kuliah berhasil dihapus');
     }
->>>>>>> 2a3dfa1fb690c7bc2aa7634274e17aed5ee47262
 }

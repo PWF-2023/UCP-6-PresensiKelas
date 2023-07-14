@@ -9,9 +9,6 @@ class KelasController extends Controller
 {
     public function index()
     {
-<<<<<<< HEAD
-        return view('kelas.index');
-=======
         $kelas = Kelas::all();
         return view('kelas.index', compact('kelas'));
     }
@@ -67,6 +64,5 @@ class KelasController extends Controller
         $kelas->delete();
 
         return redirect()->route('kelas.index')->with('success', 'Kelas berhasil dihapus');
->>>>>>> 2a3dfa1fb690c7bc2aa7634274e17aed5ee47262
     }
 }

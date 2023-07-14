@@ -2,10 +2,7 @@
 
 use App\Http\Controllers\PresensiController;
 use App\Http\Controllers\MatkulController;
-<<<<<<< HEAD
 use App\Http\Controllers\KelasController;
-=======
->>>>>>> 2a3dfa1fb690c7bc2aa7634274e17aed5ee47262
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
