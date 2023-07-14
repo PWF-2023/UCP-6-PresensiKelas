@@ -18,22 +18,10 @@
                     <x-nav-link :href="route('presensi.index')" :active="request()->routeIs('presensi.index')">
                         {{ __('Presensi') }}
                     </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('presensi.index')" :active="request()->routeIs('presensi.index')">
-                        {{ __('Presensi') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('matkul.index')" :active="request()->routeIs('matkul.index')">
                         {{ __('Matkul') }}
                     </x-nav-link>
                 </div>
-                {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('kelas.index')" :active="request()->routeIs('kelas.index')">
-                        {{ __('Kelas') }}
-                    </x-nav-link>
-                </div> --}}
             </div>
 
             <!-- Settings Dropdown -->

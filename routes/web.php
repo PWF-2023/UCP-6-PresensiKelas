@@ -20,8 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// tambahkan route presensi disini
-Route::get('/presensi', [PresensiController::class, 'index'])->name('presensi.index');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -32,6 +31,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/presensi', [PresensiController::class, 'index'])->name('presensi.index');
     Route::get('/presensi/create', [PresensiController::class, 'create'])->name('presensi.create');
