@@ -1,10 +1,7 @@
 <?php
 
 use App\Http\Controllers\PresensiController;
-<<<<<<< HEAD
 use App\Http\Controllers\MatkulController;
-=======
->>>>>>> e467d9c03d615851808693ce9db03c3663ee18a0
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
