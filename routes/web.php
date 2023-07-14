@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\PresensiController;
+use App\Http\Controllers\MatkulController;
+use App\Http\Controllers\KelasController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +23,14 @@ Route::get('/', function () {
 
 // tambahkan route presensi disini
 Route::get('/presensi', [PresensiController::class, 'index'])->name('presensi.index');
+
+// tambahkan route matkul
+Route::get('/matkul', [MatkulController::class, 'index'])->name('matkul.index');
+
+
+// tambahkan route kelas
+Route::get('/kelas', [KelasController::class, 'index'])->name('kelas.index');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
